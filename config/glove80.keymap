@@ -143,11 +143,11 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1          &kp F2     &kp F3  &kp F4         &kp F5                                                                                                                                            &kp F6                &kp F7                 &kp F8     &kp F9          &kp F10
+&kp F1          &kp F2     &kp F3  &kp F4         &kp F5                                                                                                                                            &kp F6                &kp F7                 &kp F8     &kp F9          &magic 2 0
 &kp EQUAL       &kp N1     &kp N2  &kp N3         &kp N4            &kp N5                                                                                                                  &kp N6  &kp N7                &kp N8                 &kp N9     &kp N0          &kp BSLH
 &kp TAB         &kp Q      &kp P   &kp U          &kp Y             &kp SEMICOLON                                                                                                           &kp K   &kp F                 &kp L                  &kp R      &kp B           &kp FSLH
 &kp ESC         &kp A      &kp O   &kp E          &kp I             &kp G                                                                                                                   &kp D   &kp H                 &kp T                  &kp N      &kp S           &kp MINUS
-&kp GRAVE       &kp X      &kp J   &kp COMMA      &kp EQUAL         &kp SQT        &kp LSHFT             &kp LCTRL         &sym_td       &kp LGUI  &kp RCTRL          &kp RSHFT             &kp C   &kp M                 &kp W                  &kp V      &kp PERIOD      &kp PG_UP
+&kp GRAVE       &kp X      &kp J   &kp COMMA      &kp EQUAL         &kp SQT        &layer_td             &kp LCTRL         &sym_td       &kp LGUI  &kp RCTRL          &kp RSHFT             &kp C   &kp M                 &kp W                  &kp V      &kp PERIOD      &kp PG_UP
 &magic MAGIC 0  &kp SLASH  &kp Z   &kp LESS_THAN  &kp GREATER_THAN                 &bspc_sft LSHFT BSPC  &kp LEFT_COMMAND  &kp ESCAPE    &kp TAB   &ent_cmd RGUI RET  &spc_sft RSHFT SPACE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACKET
             >;
         };
@@ -187,12 +187,12 @@
 
         symbol_layer {
             bindings = <
-&trans        &trans     &trans    &trans     &trans                                                                                                      &trans             &trans        &trans        &trans        &trans
-&kp EQUAL     &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                                                                                &kp CARET          &kp KP_NUM    &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB       &kp RPAR   &kp RBRC  &kp MINUS  &kp RBKT   &kp QMARK                                                                                &kp AT             &kp N7        &kp N8        &kp N9        &kp MINUS        &kp BSLH
-&kp ESC       &kp LPAR   &kp LBRC  &kp UNDER  &kp LBKT   &kp PIPE                                                                                 &kp HASH           &kp N4        &kp N5        &kp N6        &kp PLUS         &trans
-&kp LSHFT     &kp LBKT   &kp GT    &kp LT     &kp PLUS   &kp BSLH    &trans  &trans  &mo MAGIC   &trans  &trans     &trans       &trans                 &kp COLON          &kp N1        &kp N2        &kp N3        &kp KP_ENTER   &kp RSHFT
-&trans        &trans     &trans    &trans     &trans             &trans  &trans  &trans   &trans  &trans     &trans                              &kp N0             &kp SPACE          &kp DOT       &trans        &trans
+&trans     &trans    &trans    &trans     &trans                                                                               &trans      &trans        &trans        &trans           &trans
+&kp EQUAL  &kp EXCL  &kp AT    &kp HASH   &kp DLLR  &kp PRCNT                                                       &kp CARET  &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &kp RPAR  &kp RBRC  &kp MINUS  &kp RBKT  &kp QMARK                                                       &kp AT     &kp N7      &kp N8        &kp N9        &kp MINUS        &kp BSLH
+&kp ESC    &kp LPAR  &kp LBRC  &kp UNDER  &kp LBKT  &kp PIPE                                                        &kp HASH   &kp N4      &kp N5        &kp N6        &kp PLUS         &trans
+&kp LSHFT  &kp LBKT  &kp GT    &kp LT     &kp PLUS  &kp BSLH   &trans  &trans  &mo MAGIC    &trans  &trans  &trans  &trans     &kp COLON   &kp N1        &kp N2        &kp N3           &kp KP_ENTER
+&kp RSHFT  &trans    &trans    &trans     &trans               &trans  &trans  &trans       &trans  &trans  &trans             &trans      &kp N0        &kp SPACE     &kp DOT          &trans
             >;
         };
     };
