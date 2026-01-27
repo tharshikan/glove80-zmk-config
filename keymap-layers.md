@@ -59,9 +59,9 @@
 
 ```
 // |       |     |     |      |      |                                                               |       |       |       |       |      |
-// | CMD+= |CMD+1|CMD+2|CMD+3 |CMD+4 |CMD+5 |                                                 |CMD+6  |CMD+7  |CMD+8  |CMD+9  |CMD+0  |CMD+- |
-// | CMD+T |CMD+Q|CMD+W|CMD+E |CMD+R |CMD+T |                                                 |CMD+Y  |CMD+U  |CMD+I  |CMD+O  |CMD+P  |CMD+\ |
-// | CMD+E |CMD+A|CMD+S|CMD+D |CMD+F |CMD+G |                                                 | LEFT  | DOWN  |  UP   | RIGHT |CMD+;  |CMD+' |
-// | CMD+` |CMD+Z|CMD+X|CMD+C |CMD+V |CMD+B |      |      | TO DEF| |      |      |      |      |CMD+N  |CMD+M  |CMD+,  |CMD+.  |CMD+/  |CMD+S |
+// | CMD+= |CMD+1|CMD+2|CMD+3 |CMD+4 |CMD+5 |                                                 |CMD+6  |CMD+7  |CMD+8  |CMD+9  |CMD+0  |CMD+[ |
+// | CMD+T |CMD+'|CMD+,|CMD+. |CMD+P |CMD+Y |                                                 |CMD+F  |CMD+G  |CMD+C  |CMD+R  |CMD+L  |CMD+/ |
+// | CMD+E |CMD+A|CMD+O|CMD+E |CMD+U |CMD+I |                                                 |CMD+D  | LEFT  | DOWN  |  UP   | RIGHT |CMD+- |
+// |       |CMD+;|CMD+Q|CMD+J |CMD+K |CMD+X |      |      | TO DEF| |      |      |      |      |CMD+B  |CMD+M  |CMD+W  |CMD+V  |CMD+Z  |CMD+S |
 // |       |     |     |      |      |      |      |      |      | |      |      |      |      |       |       |       |      |       |      |
 ```
