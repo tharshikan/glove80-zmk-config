@@ -101,6 +101,18 @@
             retro-tap;
             bindings = <&kp>, <&kp>;
         };
+
+        // Custom Enter/Nav Layer behavior
+        ent_nav: enter_nav_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ENTER_NAV_LAYER";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <175>;
+            quick-tap-ms = <0>;
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     macros {
@@ -158,7 +170,7 @@
 &kp TAB         &kp Q      &kp P   &kp U          &kp Y             &kp SEMICOLON                                                                                                           &kp K   &kp F                 &kp L                  &kp R      &kp B           &kp FSLH
 &kp ESC         &kp A      &kp O   &kp E          &kp I             &kp G                                                                                                                   &kp D   &kp H                 &kp T                  &kp N      &kp S           &kp MINUS
 &kp GRAVE       &kp X      &kp J   &kp COMMA      &kp EQUAL         &kp SQT        &kp LSHFT             &kp LCTRL         &sym_td       &kp LGUI  &kp RCTRL          &kp RSHFT             &kp C   &kp M                 &kp W                  &kp V      &kp PERIOD      &kp PG_UP
-&magic MAGIC 0  &kp SLASH  &kp Z   &kp LESS_THAN  &kp GREATER_THAN                 &bspc_sft LSHFT BSPC  &nav_td           &kp ESCAPE    &kp TAB   &ent_cmd RGUI RET  &spc_sft RSHFT SPACE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACKET
+&magic MAGIC 0  &kp SLASH  &kp Z   &kp LESS_THAN  &kp GREATER_THAN                 &bspc_sft LSHFT BSPC  &nav_td           &kp ESCAPE    &kp TAB   &ent_nav NAV RET   &spc_sft RSHFT SPACE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACKET
             >;
         };
 
