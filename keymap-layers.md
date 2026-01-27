@@ -8,7 +8,7 @@
 // |  TAB  |  Q  |  P  |  U   |  P   |  ;   |                                                 |  K   |   F   |   L   |  R   |   B   |   /  |
 // |  ESC  |  A  |  O  |  E   |  I   |  G   |                                                 |  D   |   H   |   T   |  N   |   S   |   -  |
 // |   `   |  X  |  J  |  ,   |  =   |  '   | LSHFT | LCTRL |  SYM  | | LGUI  | RCTRL | RSHFT |  C   |   M   |   W   |  V   |   .   | PGUP |
-// | MAGIC | HOME|  Z  | LEFT | RIGHT|      | BSPC/S|  CMD  | LALT  | | RALT  | RET   | SPC/S |      |  UP   | DOWN  |  [   |   ]   | PGDN |
+// | MAGIC | HOME|  Z  | LEFT | RIGHT|      | BSPC/S|  CMD  | LALT  | | RALT  | RET/C | SPC/S |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 ```
 
 ## Layer 1: Lower
