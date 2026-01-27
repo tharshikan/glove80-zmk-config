@@ -7,7 +7,7 @@
 // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   \  |
 // |  TAB  |  Q  |  P  |  U   |  Y   |  ;   |                                                 |  K   |   F   |   L   |  R   |   B   |   /  |
 // |  ESC  |  A  |  O  |  E   |  I   |  G   |                                                 |  D   |   H   |   T   |  N   |   S   |   -  |
-// |   `   |  X  |  J  |  ,   |  =   |  '   | LSHFT | LCTRL |  SYM  | | LGUI  | RCTRL | RSHFT |  C   |   M   |   W   |  V   |   .   | PGUP |
+// |   `   |  X  |  J  |  ,   |  =   |  '   | LSHFT | LCTRL |  SYM  | | LGUI  |  NAV  | RSHFT |  C   |   M   |   W   |  V   |   .   | PGUP |
 // | MAGIC |  /  |  Z  |  <   |  >   |      | BSPC/S|  CMD  |  ESC  | |  TAB  | RET/C | SPC/S |      |  (    |  )    |  -   |   {   |   ]  |
 ```
 
@@ -53,4 +53,15 @@
 // |  ESC  |  (  |  {  |  _   |  [   |  |   |                                                 |   #   |   4   |   5   |   6   |   +   |      |
 // | SFT   |  [  |  >  |  <   |  +   |  \   |      |      | MAGIC | |      |      |      |      |   :   |   1   |   2   |   3   | ENTER | SFT  |
 // |       |     |     |      |      |      |      |      |      | |      |      |      |      |   0   |  SPC  |   .   |       |       |      |
+```
+
+## Layer 5: Nav
+
+```
+// |       |     |     |      |      |                                                               |       |       |       |       |      |
+// | CMD+= |CMD+1|CMD+2|CMD+3 |CMD+4 |CMD+5 |                                                 |CMD+6  |CMD+7  |CMD+8  |CMD+9  |CMD+0  |CMD+- |
+// | CMD+T |CMD+Q|CMD+W|CMD+E |CMD+R |CMD+T |                                                 |CMD+Y  |CMD+U  |CMD+I  |CMD+O  |CMD+P  |CMD+\ |
+// | CMD+E |CMD+A|CMD+S|CMD+D |CMD+F |CMD+G |                                                 | LEFT  | DOWN  |  UP   | RIGHT |CMD+;  |CMD+' |
+// | CMD+` |CMD+Z|CMD+X|CMD+C |CMD+V |CMD+B |      |      | TO DEF| |      |      |      |      |CMD+N  |CMD+M  |CMD+,  |CMD+.  |CMD+/  |CMD+S |
+// |       |     |     |      |      |      |      |      |      | |      |      |      |      |       |       |       |      |       |      |
 ```

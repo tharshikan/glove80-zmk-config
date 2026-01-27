@@ -19,6 +19,7 @@
 #define MAGIC 2
 #define FACTORY_TEST 3
 #define SYMBOL 4
+#define NAV 5
 
 / {
     behaviors {
@@ -41,6 +42,15 @@
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&mo SYMBOL>, <&to SYMBOL>;
+        };
+
+        // Custom Nav Toggle
+        nav_td: nav_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NAV_TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&mo NAV>, <&to NAV>;
         };
 
         magic: magic_hold_tap {
@@ -147,7 +157,7 @@
 &kp EQUAL       &kp N1     &kp N2  &kp N3         &kp N4            &kp N5                                                                                                                  &kp N6  &kp N7                &kp N8                 &kp N9     &kp N0          &kp BSLH
 &kp TAB         &kp Q      &kp P   &kp U          &kp Y             &kp SEMICOLON                                                                                                           &kp K   &kp F                 &kp L                  &kp R      &kp B           &kp FSLH
 &kp ESC         &kp A      &kp O   &kp E          &kp I             &kp G                                                                                                                   &kp D   &kp H                 &kp T                  &kp N      &kp S           &kp MINUS
-&kp GRAVE       &kp X      &kp J   &kp COMMA      &kp EQUAL         &kp SQT        &layer_td             &kp LCTRL         &sym_td       &kp LGUI  &kp RCTRL          &kp RSHFT             &kp C   &kp M                 &kp W                  &kp V      &kp PERIOD      &kp PG_UP
+&kp GRAVE       &kp X      &kp J   &kp COMMA      &kp EQUAL         &kp SQT        &kp LSHFT             &kp LCTRL         &sym_td       &kp LGUI  &nav_td            &kp RSHFT             &kp C   &kp M                 &kp W                  &kp V      &kp PERIOD      &kp PG_UP
 &magic MAGIC 0  &kp SLASH  &kp Z   &kp LESS_THAN  &kp GREATER_THAN                 &bspc_sft LSHFT BSPC  &kp LEFT_COMMAND  &kp ESCAPE    &kp TAB   &ent_cmd RGUI RET  &spc_sft RSHFT SPACE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACKET
             >;
         };
@@ -193,6 +203,17 @@
 &kp ESC    &kp LPAR  &kp LBRC  &kp UNDER  &kp LBKT  &kp PIPE                                                        &kp HASH   &kp N4      &kp N5        &kp N6        &kp PLUS         &trans
 &kp LSHFT  &kp LBKT  &kp GT    &kp LT     &kp PLUS  &kp BSLH   &trans  &trans  &mo MAGIC    &trans  &trans  &trans  &trans     &kp COLON   &kp N1        &kp N2        &kp N3           &kp KP_ENTER
 &kp RSHFT  &trans    &trans    &trans     &trans               &trans  &trans  &trans       &trans  &trans  &trans             &trans      &kp N0        &kp SPACE     &kp DOT          &trans
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+&trans        &trans     &trans    &trans     &trans                                                                                                      &trans             &trans        &trans        &trans        &trans
+&kp LG(EQUAL) &kp LG(N1) &kp LG(N2)&kp LG(N3) &kp LG(N4) &kp LG(N5)                                                                           &kp LG(N6) &kp LG(N7)        &kp LG(N8)    &kp LG(N9)    &kp LG(N0)    &kp LG(MINUS)
+&kp LG(TAB)   &kp LG(Q)  &kp LG(W) &kp LG(E)  &kp LG(R)  &kp LG(T)                                                                            &kp LG(Y)  &kp LG(U)         &kp LG(I)     &kp LG(O)     &kp LG(P)     &kp LG(BSLH)
+&kp LG(ESC)   &kp LG(A)  &kp LG(S) &kp LG(D)  &kp LG(F)  &kp LG(G)                                                                            &kp LEFT   &kp DOWN          &kp UP        &kp RIGHT     &kp LG(SEMI)  &kp LG(SQT)
+&kp LG(GRAVE) &kp LG(Z)  &kp LG(X) &kp LG(C)  &kp LG(V)  &kp LG(B)   &trans  &trans  &to DEFAULT &trans  &trans     &trans       &trans                 &kp LG(N)  &kp LG(M)         &kp LG(COMMA) &kp LG(DOT)   &kp LG(FSLH)   &kp LG(RSHFT)
+&trans        &trans     &trans    &trans     &trans             &trans  &trans  &trans   &trans  &trans     &trans                              &trans  &trans             &trans      &trans        &trans
             >;
         };
     };
