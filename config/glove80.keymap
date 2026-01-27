@@ -18,6 +18,7 @@
 #define LOWER 1
 #define MAGIC 2
 #define FACTORY_TEST 3
+#define SYMBOL 4
 
 / {
     behaviors {
@@ -39,7 +40,7 @@
             label = "SYMBOL_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <175>;
-            bindings = <&mo LOWER>, <&to LOWER>;
+            bindings = <&mo SYMBOL>, <&to SYMBOL>;
         };
 
         magic: magic_hold_tap {
@@ -181,6 +182,17 @@
 &kp N3  &kp N9  &kp N5  &kp N1  &kp N7  &kp N2                                                    &kp N2  &kp N7  &kp N1  &kp N5  &kp N9  &kp N3
 &kp N4  &kp N0  &kp N6  &kp N2  &kp N8  &kp N3  &kp N4  &kp N5  &kp N6    &kp N6  &kp N5  &kp N4  &kp N3  &kp N8  &kp N2  &kp N6  &kp N0  &kp N4
 &kp N5  &kp N1  &kp N7  &kp N3  &kp N9          &kp N7  &kp N8  &kp N9    &kp N9  &kp N8  &kp N7          &kp N9  &kp N3  &kp N7  &kp N1  &kp N5
+            >;
+        };
+
+        symbol_layer {
+            bindings = <
+&kp EQUAL     &kp EXCL   &kp AT    &kp HASH   &kp DLLR                                                                                                    &mo FACTORY_TEST   &kp CARET   &kp KP_NUM    &kp KP_EQUAL  &kp KP_SLASH
+&kp TAB       &kp RPAR   &kp RBRC  &kp MINUS  &kp RBKT   &trans                                                                                   &none   &kp AT             &kp N7      &kp N8        &kp N9        &kp KP_MULTIPLY
+&kp ESC       &kp LPAR   &kp LBRC  &kp UNDER  &kp LBKT   &trans                                                                                   &none   &kp HASH           &kp N4      &kp N5        &kp N6        &kp KP_MINUS
+&kp UP_ARROW  &kp LBKT   &kp GT    &kp LT     &kp PLUS   &kp BSLH                                                                                 &trans  &kp COLON          &kp N1      &kp N2        &kp N3        &kp KP_PLUS
+&mo MAGIC     &trans     &trans    &trans     &trans     &trans  &trans  &trans  &trans   &trans  &trans     &trans       &trans                 &trans  &kp KP_N0          &kp DOT     &kp KP_ENTER  &trans
+&trans        &trans     &trans    &trans     &trans             &trans  &trans  &trans   &trans  &trans     &trans                              &trans  &trans             &trans      &trans        &trans
             >;
         };
     };
