@@ -5,10 +5,10 @@
 ```
 // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
 // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   \  |
-// |  TAB  |  Q  |  P  |  U   |  P   |  ;   |                                                 |  K   |   F   |   L   |  R   |   B   |   /  |
+// |  TAB  |  Q  |  P  |  U   |  Y   |  ;   |                                                 |  K   |   F   |   L   |  R   |   B   |   /  |
 // |  ESC  |  A  |  O  |  E   |  I   |  G   |                                                 |  D   |   H   |   T   |  N   |   S   |   -  |
 // |   `   |  X  |  J  |  ,   |  =   |  '   | LSHFT | LCTRL |  SYM  | | LGUI  | RCTRL | RSHFT |  C   |   M   |   W   |  V   |   .   | PGUP |
-// | MAGIC | HOME|  Z  | LEFT | RIGHT|      | BSPC/S|  CMD  | LALT  | | RALT  | RET/C | SPC/S |      |  UP   | DOWN  |  [   |   ]   | PGDN |
+// | MAGIC |  /  |  Z  |  <   |  >   |      | BSPC/S|  CMD  |  ESC  | |  TAB  | RET/C | SPC/S |      |  (    |  )    |  -   |   {   |   ]  |
 ```
 
 ## Layer 1: Lower
