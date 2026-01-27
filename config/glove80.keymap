@@ -32,6 +32,15 @@
             bindings = <&mo LOWER>, <&to LOWER>;
         };
 
+        // Custom Symbol Toggle
+        sym_td: symbol_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SYMBOL_TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&mo LOWER>, <&to LOWER>;
+        };
+
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_HOLD_TAP";
@@ -50,6 +59,18 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+        };
+
+        // Custom Space/Shift behavior
+        spc_sft: space_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_SHIFT";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <225>;
+            quick-tap-ms = <0>;
             retro-tap;
             bindings = <&kp>, <&kp>;
         };
@@ -109,8 +130,8 @@
 &kp EQUAL       &kp N1    &kp N2  &kp N3     &kp N4     &kp N5                                                                                   &kp N6  &kp N7  &kp N8    &kp N9    &kp N0      &kp BSLH
 &kp TAB         &kp Q     &kp P   &kp U      &kp P      &kp SEMICOLON                                                                            &kp K   &kp F   &kp L     &kp R     &kp B       &kp FSLH
 &kp ESC         &kp A     &kp O   &kp E      &kp I      &kp G                                                                                    &kp D   &kp H   &kp T     &kp N     &kp S       &kp MINUS
-&kp GRAVE       &kp X     &kp J   &kp COMMA  &kp EQUAL  &kp SQT        &kp LSHFT  &kp LCTRL         &layer_td    &kp LGUI  &kp RCTRL  &kp RSHFT  &kp C   &kp M   &kp W     &kp V     &kp PERIOD  &kp PG_UP
-&magic MAGIC 0  &kp HOME  &kp Z   &kp LEFT   &kp RIGHT                 &bspc_sft LSHFT BSPC   &kp LEFT_COMMAND  &kp LALT     &kp RALT  &kp RET    &kp SPACE          &kp UP  &kp DOWN  &kp LBKT  &kp RBKT    &kp PG_DN
+&kp GRAVE       &kp X     &kp J   &kp COMMA  &kp EQUAL  &kp SQT        &kp LSHFT  &kp LCTRL         &sym_td      &kp LGUI  &kp RCTRL  &kp RSHFT  &kp C   &kp M   &kp W     &kp V     &kp PERIOD  &kp PG_UP
+&magic MAGIC 0  &kp HOME  &kp Z   &kp LEFT   &kp RIGHT                 &bspc_sft LSHFT BSPC   &kp LEFT_COMMAND  &kp LALT     &kp RALT  &kp RET    &spc_sft RSHFT SPACE   &kp UP  &kp DOWN  &kp LBKT  &kp RBKT    &kp PG_DN
             >;
         };
 
