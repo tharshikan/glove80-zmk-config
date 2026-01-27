@@ -4,10 +4,10 @@
 
 ```
 // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
-// |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                                 |  Y   |   U   |   I   |  O   |   P   |   \  |
-// |  ESC  |  A  |  S  |  D   |  F   |  G   |                                                 |  H   |   J   |   K   |  L   |   ;   |   '  |
-// |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
+// |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   \  |
+// |  TAB  |  '  |  ,  |  .   |  P   |  Y   |                                                 |  F   |   G   |   C   |  R   |   L   |   /  |
+// |  ESC  |  A  |  O   |  E   |  U   |  I   |                                                 |  D   |   H   |   T   |  N   |   S   |   -  |
+// |   `   |  ;  |  Q  |  J   |  K   |  X   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  B   |   M   |   W   |  V   |   Z   | PGUP |
 // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 ```
 
