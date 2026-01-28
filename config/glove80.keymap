@@ -247,8 +247,7 @@
 
         launcher_layer {
             bindings = <
-        launcher_layer {
-            bindings = <
+
 &kp HYPER(F1)   &kp HYPER(F2) &kp HYPER(F3)&kp HYPER(F4) &kp HYPER(F5)                                                                                                                        &kp HYPER(F6)   &kp HYPER(F7)   &kp HYPER(F8)   &kp HYPER(F9)   &trans
 &kp HYPER(EQUAL)&kp HYPER(N1) &kp HYPER(N2)&kp HYPER(N3) &kp HYPER(N4)     &kp HYPER(N5)                                                                                     &kp HYPER(N6)    &kp HYPER(N7)   &kp HYPER(N8)   &kp HYPER(N9)   &kp HYPER(N0)   &kp HYPER(BSLH)
 &kp HYPER(TAB)  &kp HYPER(OSLH)&kp HYPER(COMMA)&kp HYPER(DOT)&kp HYPER(P)   &kp HYPER(Y)                                                                                      &kp HYPER(F)    &kp HYPER(G)    &kp HYPER(C)    &kp HYPER(R)    &kp HYPER(L)    &kp HYPER(FSLH)
@@ -257,6 +256,6 @@
 &trans          &trans        &trans       &trans        &trans                           &kp HYPER(BSPC)&trans      &kp HYPER(ESC)&kp HYPER(TAB)&kp HYPER(RET)  &kp HYPER(SPACE)         &kp HYPER(LPAR) &kp HYPER(RPAR) &kp HYPER(MINUS)&kp HYPER(LBRC) &kp HYPER(RBKT)
             >;
         };
-        };
+
     };
 };
