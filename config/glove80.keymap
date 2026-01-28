@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define HYPER LC(LS(LG(LALT)))
+
 
 // layers
 
@@ -248,12 +248,12 @@
         launcher_layer {
             bindings = <
 
-&kp HYPER(F1)   &kp HYPER(F2) &kp HYPER(F3)&kp HYPER(F4) &kp HYPER(F5)                                                                                                                        &kp HYPER(F6)   &kp HYPER(F7)   &kp HYPER(F8)   &kp HYPER(F9)   &trans
-&kp HYPER(EQUAL)&kp HYPER(N1) &kp HYPER(N2)&kp HYPER(N3) &kp HYPER(N4)     &kp HYPER(N5)                                                                                     &kp HYPER(N6)    &kp HYPER(N7)   &kp HYPER(N8)   &kp HYPER(N9)   &kp HYPER(N0)   &kp HYPER(BSLH)
-&kp HYPER(TAB)  &kp HYPER(OSLH)&kp HYPER(COMMA)&kp HYPER(DOT)&kp HYPER(P)   &kp HYPER(Y)                                                                                      &kp HYPER(F)    &kp HYPER(G)    &kp HYPER(C)    &kp HYPER(R)    &kp HYPER(L)    &kp HYPER(FSLH)
-&kp HYPER(ESC)  &kp HYPER(A)  &kp HYPER(O) &kp HYPER(E)  &kp HYPER(U)      &kp HYPER(I)                                                                                      &kp HYPER(D)    &kp HYPER(H)    &kp HYPER(T)    &kp HYPER(N)    &kp HYPER(S)    &kp HYPER(MINUS)
-&kp HYPER(GRAVE)&kp HYPER(SEMI)&kp HYPER(Q)&kp HYPER(J)  &kp HYPER(K)      &kp HYPER(X)   &trans      &trans      &trans        &trans     &trans             &trans     &kp HYPER(B)    &kp HYPER(M)    &kp HYPER(W)    &kp HYPER(V)    &kp HYPER(Z)    &kp HYPER(PG_UP)
-&trans          &trans        &trans       &trans        &trans                           &kp HYPER(BSPC)&trans      &kp HYPER(ESC)&kp HYPER(TAB)&kp HYPER(RET)  &kp HYPER(SPACE)         &kp HYPER(LPAR) &kp HYPER(RPAR) &kp HYPER(MINUS)&kp HYPER(LBRC) &kp HYPER(RBKT)
+&kp LC(LS(LG(LA(F1))))   &kp LC(LS(LG(LA(F2)))) &kp LC(LS(LG(LA(F3)))) &kp LC(LS(LG(LA(F4)))) &kp LC(LS(LG(LA(F5))))                                                                                                                        &kp LC(LS(LG(LA(F6))))   &kp LC(LS(LG(LA(F7))))   &kp LC(LS(LG(LA(F8))))   &kp LC(LS(LG(LA(F9))))   &trans
+&kp LC(LS(LG(LA(EQUAL))))&kp LC(LS(LG(LA(N1)))) &kp LC(LS(LG(LA(N2)))) &kp LC(LS(LG(LA(N3)))) &kp LC(LS(LG(LA(N4))))     &kp LC(LS(LG(LA(N5))))                                                                                     &kp LC(LS(LG(LA(N6))))    &kp LC(LS(LG(LA(N7))))   &kp LC(LS(LG(LA(N8))))   &kp LC(LS(LG(LA(N9))))   &kp LC(LS(LG(LA(N0))))   &kp LC(LS(LG(LA(BSLH))))
+&kp LC(LS(LG(LA(TAB))))  &kp LC(LS(LG(LA(SQT)))) &kp LC(LS(LG(LA(COMMA)))) &kp LC(LS(LG(LA(DOT)))) &kp LC(LS(LG(LA(P))))   &kp LC(LS(LG(LA(Y))))                                                                                      &kp LC(LS(LG(LA(F))))    &kp LC(LS(LG(LA(G))))    &kp LC(LS(LG(LA(C))))    &kp LC(LS(LG(LA(R))))    &kp LC(LS(LG(LA(L))))    &kp LC(LS(LG(LA(FSLH))))
+&kp LC(LS(LG(LA(ESC))))  &kp LC(LS(LG(LA(A))))  &kp LC(LS(LG(LA(O)))) &kp LC(LS(LG(LA(E))))  &kp LC(LS(LG(LA(U))))      &kp LC(LS(LG(LA(I))))                                                                                      &kp LC(LS(LG(LA(D))))    &kp LC(LS(LG(LA(H))))    &kp LC(LS(LG(LA(T))))    &kp LC(LS(LG(LA(N))))    &kp LC(LS(LG(LA(S))))    &kp LC(LS(LG(LA(MINUS))))
+&kp LC(LS(LG(LA(GRAVE))))&kp LC(LS(LG(LA(SEMI))))&kp LC(LS(LG(LA(Q))))&kp LC(LS(LG(LA(J))))  &kp LC(LS(LG(LA(K))))      &kp LC(LS(LG(LA(X))))   &trans      &trans      &trans        &trans     &trans             &trans     &kp LC(LS(LG(LA(B))))    &kp LC(LS(LG(LA(M))))    &kp LC(LS(LG(LA(W))))    &kp LC(LS(LG(LA(V))))    &kp LC(LS(LG(LA(Z))))    &kp LC(LS(LG(LA(PG_UP))))
+&trans          &trans        &trans       &trans        &trans                           &kp LC(LS(LG(LA(BSPC)))) &trans      &kp LC(LS(LG(LA(ESC))))&kp LC(LS(LG(LA(TAB))))&kp LC(LS(LG(LA(RET))))  &kp LC(LS(LG(LA(SPACE))))         &kp LC(LS(LG(LA(LPAR)))) &kp LC(LS(LG(LA(RPAR)))) &kp LC(LS(LG(LA(MINUS))))&kp LC(LS(LG(LA(LBRC)))) &kp LC(LS(LG(LA(RBKT))))
             >;
         };
 
