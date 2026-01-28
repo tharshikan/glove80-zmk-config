@@ -116,6 +116,19 @@
             retro-tap;
             bindings = <&mo>, <&kp>;
         };
+
+        // Custom Less Than/Option Layer behavior
+        less_opt: less_than_option {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LESS_THAN_OPTION";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     macros {
@@ -173,7 +186,7 @@
 &kp TAB         &kp Q      &kp P   &kp U          &kp Y             &kp SEMICOLON                                                                                                   &kp K   &kp F                 &kp L                  &kp R      &kp B           &kp FSLH
 &kp ESC         &kp A      &kp O   &kp E          &kp I             &kp G                                                                                                           &kp D   &kp H                 &kp T                  &kp N      &kp S           &sym_td
 &kp GRAVE       &kp X      &kp J   &kp COMMA      &kp EQUAL         &kp SQT        &kp LSHFT             &kp LCTRL  &sym_td       &kp LGUI  &kp RCTRL         &kp RSHFT             &kp C   &kp M                 &kp W                  &kp V      &kp PERIOD      &kp PG_UP
-&magic MAGIC 0  &kp SLASH  &kp Z   &kp LESS_THAN  &kp GREATER_THAN                 &bspc_sft LSHFT BSPC  &nav_td    &kp ESCAPE    &kp TAB   &ent_nav NAV RET  &spc_sft RSHFT SPACE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACKET
+&magic MAGIC 0  &kp SLASH  &kp Z   &less_opt OPTION LESS_THAN  &kp GREATER_THAN                 &bspc_sft LSHFT BSPC  &nav_td    &kp ESCAPE    &kp TAB   &ent_nav NAV RET  &spc_sft RSHFT SPACE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACKET
             >;
         };
 
