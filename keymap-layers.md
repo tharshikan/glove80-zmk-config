@@ -65,3 +65,14 @@
 // |       |CMD+;|CMD+Q|CMD+J |CMD+K |CMD+X |      |      | TO DEF| |      |      |      |      |CMD+B  |CMD+M  |CMD+W  |CMD+V  |CMD+Z  |CMD+S |
 // |       |     |     |      |      |      |      |      |      | |      |      |      |      |       |       |       |      |       |      |
 ```
+
+## Layer 6: Option
+
+```
+// | OPT+F1|OPT+F2|OPT+F3|OPT+F4|OPT+F5|                                                               |OPT+F6 |OPT+F7 |OPT+F8 |OPT+F9 |       |
+// | OPT+= |OPT+1 |OPT+2 |OPT+3 |OPT+4 |OPT+5 |                                                 |OPT+6  |OPT+7  |OPT+8  |OPT+9  |OPT+0  |OPT+\ |
+// | OPT+TAB|OPT+Q|OPT+P |OPT+U |OPT+Y |OPT+; |                                                 |OPT+K  |OPT+F  |OPT+L  |OPT+R  |OPT+B  |OPT+/ |
+// | OPT+ESC|OPT+A|OPT+O |OPT+E |OPT+I |OPT+G |                                                 |OPT+D  |OPT+H  |OPT+T  |OPT+N  |OPT+S  |OPT+- |
+// | OPT+` |OPT+X |OPT+J |OPT+, |OPT+= |OPT+' |      |      |      | |      |      |      |      |OPT+C  |OPT+M  |OPT+W  |OPT+V  |OPT+.  |OPT+PGUP|
+// |       |OPT+/ |OPT+Z |OPT+< |OPT+> |      |OPT+BS|      |OPT+ESC| |OPT+TB|OPT+RT|OPT+SP|      |OPT+(  |OPT+)  |OPT+-  |OPT+{  |OPT+] |
+```

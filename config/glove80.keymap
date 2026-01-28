@@ -20,6 +20,7 @@
 #define FACTORY_TEST 3
 #define SYMBOL 4
 #define NAV 5
+#define OPTION 6
 
 / {
     behaviors {
@@ -228,6 +229,17 @@
 &kp LG(ESC)    &kp LG(A)    &kp LG(O)      &kp LG(K)    &kp LG(I)   &kp LG(PERIOD)                                                         &kp LG(D)   &kp LEFT    &kp DOWN    &kp UP         &kp RIGHT   &kp LG(MINUS)
 &trans         &kp LG(Z)    &kp LG(COMMA)  &kp LG(C)    &kp LG(V)   &kp LG(LS(X))   &trans  &trans  &to DEFAULT    &trans  &trans  &trans  &kp LG(B)   &kp LG(M)   &kp LG(W)   &kp LG(V)      &kp LG(F)   &kp LG(Z)
 &kp LG(RSHFT)  &trans       &trans         &trans       &trans                      &trans  &trans  &trans         &trans  &trans  &trans              &trans      &trans      &kp LG(LS(G))  &kp LG(G)   &trans
+            >;
+        };
+
+        option_layer {
+            bindings = <
+&kp LA(F1)      &kp LA(F2)   &kp LA(F3) &kp LA(F4)     &kp LA(F5)                                                                                                                        &kp LA(F6)            &kp LA(F7)            &kp LA(F8)      &kp LA(F9)       &trans
+&kp LA(EQUAL)   &kp LA(N1)   &kp LA(N2) &kp LA(N3)     &kp LA(N4)        &kp LA(N5)                                                                                    &kp LA(N6)    &kp LA(N7)            &kp LA(N8)            &kp LA(N9)      &kp LA(N0)       &kp LA(BSLH)
+&kp LA(TAB)     &kp LA(Q)    &kp LA(P)  &kp LA(U)      &kp LA(Y)         &kp LA(SEMI)                                                                                  &kp LA(K)     &kp LA(F)             &kp LA(L)             &kp LA(R)       &kp LA(B)        &kp LA(FSLH)
+&kp LA(ESC)     &kp LA(A)    &kp LA(O)  &kp LA(E)      &kp LA(I)         &kp LA(G)                                                                                     &kp LA(D)     &kp LA(H)             &kp LA(T)             &kp LA(N)       &kp LA(S)        &kp LA(MINUS)
+&kp LA(GRAVE)   &kp LA(X)    &kp LA(J)  &kp LA(COMMA)  &kp LA(EQUAL)     &kp LA(SQT)    &trans      &trans      &trans        &trans     &trans             &trans     &kp LA(C)     &kp LA(M)             &kp LA(W)             &kp LA(V)       &kp LA(PERIOD)   &kp LA(PG_UP)
+&trans          &kp LA(SLASH)&kp LA(Z)  &kp LA(LT)     &kp LA(GT)                       &kp LA(BSPC)&trans      &kp LA(ESC)   &kp LA(TAB)&kp LA(RET)        &kp LA(SPACE)          &kp LA(LPAR)          &kp LA(RPAR)          &kp LA(MINUS)   &kp LA(LBRC)     &kp LA(RBKT)
             >;
         };
     };
