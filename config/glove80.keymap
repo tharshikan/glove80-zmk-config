@@ -118,6 +118,7 @@
         };
 
         // Custom Less Than/Option Layer behavior
+
         less_opt: less_than_option {
             compatible = "zmk,behavior-hold-tap";
             label = "LESS_THAN_OPTION";
@@ -181,11 +182,11 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1          &kp F2     &kp F3  &kp F4         &kp F5                                                                                                                                    &kp F6                &kp F7                 &kp F8     &kp F9          &magic 2 0
-&kp EQUAL       &kp N1     &kp N2  &kp N3         &kp N4            &kp N5                                                                                                          &kp N6  &kp N7                &kp N8                 &kp N9     &kp N0          &kp BSLH
-&kp TAB         &kp Q      &kp P   &kp U          &kp Y             &kp SEMICOLON                                                                                                   &kp K   &kp F                 &kp L                  &kp R      &kp B           &kp FSLH
-&kp ESC         &kp A      &kp O   &kp E          &kp I             &kp G                                                                                                           &kp D   &kp H                 &kp T                  &kp N      &kp S           &sym_td
-&kp GRAVE       &kp X      &kp J   &kp COMMA      &kp EQUAL         &kp SQT        &kp LSHFT             &kp LCTRL  &sym_td       &kp LGUI  &kp RCTRL         &kp RSHFT             &kp C   &kp M                 &kp W                  &kp V      &kp PERIOD      &kp PG_UP
+&kp F1          &kp F2     &kp F3  &kp F4                      &kp F5                                                                                                                                    &kp F6                &kp F7                 &kp F8     &kp F9          &magic 2 0
+&kp EQUAL       &kp N1     &kp N2  &kp N3                      &kp N4            &kp N5                                                                                                          &kp N6  &kp N7                &kp N8                 &kp N9     &kp N0          &kp BSLH
+&kp TAB         &kp Q      &kp P   &kp U                       &kp Y             &kp SEMICOLON                                                                                                   &kp K   &kp F                 &kp L                  &kp R      &kp B           &kp FSLH
+&kp ESC         &kp A      &kp O   &kp E                       &kp I             &kp G                                                                                                           &kp D   &kp H                 &kp T                  &kp N      &kp S           &sym_td
+&kp GRAVE       &kp X      &kp J   &kp COMMA                   &kp EQUAL         &kp SQT        &kp LSHFT             &kp LCTRL  &sym_td       &kp LGUI  &kp RCTRL         &kp RSHFT             &kp C   &kp M                 &kp W                  &kp V      &kp PERIOD      &kp PG_UP
 &magic MAGIC 0  &kp SLASH  &kp Z   &less_opt OPTION LESS_THAN  &kp GREATER_THAN                 &bspc_sft LSHFT BSPC  &nav_td    &kp ESCAPE    &kp TAB   &ent_nav NAV RET  &spc_sft RSHFT SPACE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACKET
             >;
         };
@@ -247,12 +248,12 @@
 
         option_layer {
             bindings = <
-&kp LA(F1)      &kp LA(F2)   &kp LA(F3) &kp LA(F4)     &kp LA(F5)                                                                                                                        &kp LA(F6)            &kp LA(F7)            &kp LA(F8)      &kp LA(F9)       &trans
-&kp LA(EQUAL)   &kp LA(N1)   &kp LA(N2) &kp LA(N3)     &kp LA(N4)        &kp LA(N5)                                                                                    &kp LA(N6)    &kp LA(N7)            &kp LA(N8)            &kp LA(N9)      &kp LA(N0)       &kp LA(BSLH)
-&kp LA(TAB)     &kp LA(Q)    &kp LA(P)  &kp LA(U)      &kp LA(Y)         &kp LA(SEMI)                                                                                  &kp LA(K)     &kp LA(F)             &kp LA(L)             &kp LA(R)       &kp LA(B)        &kp LA(FSLH)
-&kp LA(ESC)     &kp LA(A)    &kp LA(O)  &kp LA(E)      &kp LA(I)         &kp LA(G)                                                                                     &kp LA(D)     &kp LA(H)             &kp LA(T)             &kp LA(N)       &kp LA(S)        &kp LA(MINUS)
-&kp LA(GRAVE)   &kp LA(X)    &kp LA(J)  &kp LA(COMMA)  &kp LA(EQUAL)     &kp LA(SQT)    &trans      &trans      &trans        &trans     &trans             &trans     &kp LA(C)     &kp LA(M)             &kp LA(W)             &kp LA(V)       &kp LA(PERIOD)   &kp LA(PG_UP)
-&trans          &kp LA(SLASH)&kp LA(Z)  &kp LA(LT)     &kp LA(GT)                       &kp LA(BSPC)&trans      &kp LA(ESC)   &kp LA(TAB)&kp LA(RET)        &kp LA(SPACE)          &kp LA(LPAR)          &kp LA(RPAR)          &kp LA(MINUS)   &kp LA(LBRC)     &kp LA(RBKT)
+&kp LA(F1)     &kp LA(F2)     &kp LA(F3)  &kp LA(F4)     &kp LA(F5)                                                                                                                   &kp LA(F6)          &kp LA(F7)          &kp LA(F8)        &kp LA(F9)           &trans
+&kp LA(EQUAL)  &kp LA(N1)     &kp LA(N2)  &kp LA(N3)     &kp LA(N4)     &kp LA(N5)                                                                                  &kp LA(N6)        &kp LA(N7)          &kp LA(N8)          &kp LA(N9)        &kp LA(N0)           &kp LA(BSLH)
+&kp LA(TAB)    &kp LA(Q)      &kp LA(P)   &kp LA(U)      &kp LA(Y)      &kp LA(SEMI)                                                                                &kp RG(MINUS)     &kp RG(PLUS)        &kp LA(L)           &kp LA(R)         &kp LA(B)            &kp LA(FSLH)
+&kp LA(ESC)    &kp LA(A)      &kp LA(O)   &kp LA(E)      &kp LA(I)      &kp LA(G)                                                                                   &kp RG(NUMBER_0)  &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(UP_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(MINUS)
+&kp LA(GRAVE)  &kp LA(X)      &kp LA(J)   &kp LA(COMMA)  &kp LA(EQUAL)  &kp LA(SQT)   &trans        &trans  &trans         &trans       &trans       &trans         &kp LA(C)         &kp LA(M)           &kp LA(W)           &kp LA(V)         &kp LA(PERIOD)       &kp LA(PG_UP)
+&trans         &kp LA(SLASH)  &kp LA(Z)   &kp LA(LT)     &kp LA(GT)                   &kp LA(BSPC)  &trans  &kp LA(ESC)    &kp LA(TAB)  &kp LA(RET)  &kp LA(SPACE)                    &kp LA(LPAR)        &kp LA(RPAR)        &kp LA(MINUS)     &kp LA(LBRC)         &kp LA(RBKT)
             >;
         };
     };
