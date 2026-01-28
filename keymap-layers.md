@@ -8,7 +8,7 @@
 // |  TAB  |  Q  |  P  |  U   |  Y   |  ;   |                                                 |  K   |   F   |   L   |  R   |   B   |   /  |
 // |  ESC  |  A  |  O  |  E   |  I   |  G   |                                                 |  D   |   H   |   T   |  N   |   S   |   -  |
 // |   `   |  X  |  J  |  ,   |  =   |  '   | LSHFT | LCTRL |  SYM  | | LGUI  | RCTRL | RSHFT |  C   |   M   |   W   |  V   |   .   | PGUP |
-// | MAGIC |  /  |  Z  | </OPT|  >   |      | BSPC/S|  NAV  |  ESC  | |  TAB  | RET/N | SPC/S |      |  (    |  )    |  -   |   {   |   ]  |
+// | MAGIC |  /  |  Z  | </LNC|  >   |      | BSPC/S|  NAV  |  ESC  | |  TAB  | RET/N | SPC/S |      |  (    |  )    |  -   |   {   |   ]  |
 ```
 
 ## Layer 1: Lower
@@ -66,13 +66,13 @@
 // |       |     |     |      |      |      |      |      |      | |      |      |      |      |       |       |       |      |       |      |
 ```
 
-## Layer 6: Option
+## Layer 6: Launcher
 
 ```
-// | OPT+F1|OPT+F2|OPT+F3|OPT+F4|OPT+F5|                                                               |OPT+F6 |OPT+F7 |OPT+F8 |OPT+F9 |       |
-// | OPT+= |OPT+1 |OPT+2 |OPT+3 |OPT+4 |OPT+5 |                                                 |OPT+6  |OPT+7  |OPT+8  |OPT+9  |OPT+0  |OPT+\ |
-// | OPT+TAB|OPT+Q|OPT+P |OPT+U |OPT+Y |OPT+; |                                                 |OPT+K  |OPT+F  |OPT+L  |OPT+R  |OPT+B  |OPT+/ |
-// | OPT+ESC|OPT+A|OPT+O |OPT+E |OPT+I |OPT+G |                                                 |OPT+D  |OPT+H  |OPT+T  |OPT+N  |OPT+S  |OPT+- |
-// | OPT+` |OPT+X |OPT+J |OPT+, |OPT+= |OPT+' |      |      |      | |      |      |      |      |OPT+C  |OPT+M  |OPT+W  |OPT+V  |OPT+.  |OPT+PGUP|
-// |       |OPT+/ |OPT+Z |OPT+< |OPT+> |      |OPT+BS|      |OPT+ESC| |OPT+TB|OPT+RT|OPT+SP|      |OPT+(  |OPT+)  |OPT+-  |OPT+{  |OPT+] |
+// | HYP+F1|HYP+F2|HYP+F3|HYP+F4|HYP+F5|                                                               |HYP+F6 |HYP+F7 |HYP+F8 |HYP+F9 |       |
+// | HYP+= |HYP+1 |HYP+2 |HYP+3 |HYP+4 |HYP+5 |                                                 |HYP+6  |HYP+7  |HYP+8  |HYP+9  |HYP+0  |HYP+\ |
+// | HYP+TB|HYP+' |HYP+, |HYP+. |HYP+P |HYP+Y |                                                 |HYP+F  |HYP+G  |HYP+C  |HYP+R  |HYP+L  |HYP+/ |
+// | HYP+ES|HYP+A |HYP+O |HYP+E |HYP+U |HYP+I |                                                 |HYP+D  |HYP+H  |HYP+T  |HYP+N  |HYP+S  |HYP+- |
+// | HYP+` |HYP+; |HYP+Q |HYP+J |HYP+K |HYP+X |      |      |      | |      |      |      |      |HYP+B  |HYP+M  |HYP+W  |HYP+V  |HYP+Z  |HYP+PU|
+// |       |      |      |      |      |      |HYP+BS|      |HYP+ES| |HYP+TB|HYP+RT|HYP+SP|      |HYP+(  |HYP+)  |HYP+-  |HYP+{  |HYP+] |
 ```
