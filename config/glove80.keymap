@@ -22,8 +22,13 @@
 #define NAV 5
 #define LAUNCHER 6
 
+#define KEYS_L 0 1 2 3 4 5 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57
+#define KEYS_R 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79
+
 / {
     behaviors {
+        #include "macros.dtsi"
+        
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
 
@@ -129,6 +134,313 @@
             retro-tap;
             bindings = <&mo>, <&kp>;
         };
+
+        smart_bspc: smart_backspace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_BACKSPACE";
+            #binding-cells = <0>;
+            bindings = <&bspc_sft LSHFT BSPC>, <&kp LA(BSPC)>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        select_word: select_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SELECT_WORD";
+            #binding-cells = <0>;
+            bindings = <&Mac_Select_Word_Right>, <&Mac_Select_Word_Left>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* Select Line: Normal=right, Shift=left */
+
+        select_line: select_line {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SELECT_LINE";
+            #binding-cells = <0>;
+            bindings = <&Mac_Select_Line_Right>, <&Mac_Select_Line_Left>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* Extend Word: Normal=right, Shift=left */
+
+        extend_word: extend_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_WORD";
+            #binding-cells = <0>;
+            bindings = <&Mac_Extend_Word_Right>, <&Mac_Extend_Word_Left>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* Extend Line: Normal=down, Shift=up */
+
+        extend_line: extend_line {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_LINE";
+            #binding-cells = <0>;
+            bindings = <&Mac_Extend_Line_Down>, <&Mac_Extend_Line_Up>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* Hold-Tap for Nav Layer: Hold=Momentary(4), Tap=Sticky(4) */
+        /* Note: Double-tap to toggle is removed to fix build compatibility constraints */
+
+        lt_nav_enter: layer_tap_nav_enter {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_NAV_ENTER";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+        };
+
+        lt_launcher: layer_tap_launcher {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_LAUNCHER";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <180>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+        };
+
+        hrm_left_index: homerow_mod_left_sym {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_LEFT_SYM";
+            #binding-cells = <2>;
+            tapping-term-ms = <260>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_R>;
+        };
+
+        hrm_left_ring: homerow_mod_left_ring_sym {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_LEFT_RING_SYM";
+            #binding-cells = <2>;
+            tapping-term-ms = <270>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_R>;
+        };
+
+        hrm_right_index: homerow_mod_right_sym {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_RIGHT_SYM";
+            #binding-cells = <2>;
+            tapping-term-ms = <234>;
+            quick-tap-ms = <180>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_L>;
+        };
+
+        hrm_right_ring: homerow_mod_right_ring_sym {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_RIGHT_RING_SYM";
+            #binding-cells = <2>;
+            tapping-term-ms = <243>;
+            quick-tap-ms = <180>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_L>;
+        };
+
+        hrm_left_middle: homerow_mod_left_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_LEFT_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <180>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_R>;
+        };
+
+        hrm_right_middle: homerow_mod_right_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_RIGHT_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <243>;
+            quick-tap-ms = <180>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_L>;
+        };
+
+        hrm_left_pinky: homerow_mod_left_cmd {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_LEFT_CMD";
+            #binding-cells = <2>;
+            tapping-term-ms = <350>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_R>;
+        };
+
+        hrm_left_pinky_bottom: homerow_mod_left_pinky_bottom_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_LEFT_PINKY_BOTTOM_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <350>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_R>;
+        };
+
+        hrm_right_pinky: homerow_mod_right_cmd {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_RIGHT_CMD";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <180>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_L>;
+        };
+
+        hrm_right_pinky_bottom: homerow_mod_right_pinky_bottom_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD_RIGHT_PINKY_BOTTOM_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <180>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_L>;
+        };
+
+        td_backup_sym: tap_dance_backup_sym {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BACKUP_SYM";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&sl 1>, <&tog 1>;
+        };
+
+        /* Smart Toggle for Cursor Layer: Tap=Sticky, DoubleTap=Lock(tog) */
+
+        td_cursor: tap_dance_cursor {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CURSOR";
+            #binding-cells = <0>;
+            tapping-term-ms = <175>;
+            bindings = <&sl 5>, <&tog 5>;
+        };
+
+        fat_arrow: fat_arrow_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FAT_ARROW_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&macro_fat_arrow>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        add_assign: add_assign_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ADD_ASSIGN_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&macro_add_assign>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        not_equal: not_equal_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NOT_EQUAL_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&macro_not_equal>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        underscore_arrow: underscore_arrow_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UNDERSCORE_ARROW_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp UNDER>, <&macro_thin_arrow>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_9: morph_9_lbracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_9_LBRACKET";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&macro_lbracket>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        morph_0: morph_0_rbracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_0_RBRACKET";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&macro_rbracket>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        lcurly_sq: lcurly_square {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LCURLY_SQUARE";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&macro_lbracket>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rcurly_sq: rcurly_square {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RCURLY_SQUARE";
+            #binding-cells = <0>;
+            bindings = <&kp RBRC>, <&macro_rbracket>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -181,12 +493,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1          &kp F2     &kp F3  &kp F4         &kp F5                                                                                                                                    &kp F6                &kp F7                 &kp F8     &kp F9          &magic 2 0
-&kp EQUAL       &kp N1     &kp N2  &kp N3         &kp N4            &kp N5                                                                                                          &kp N6  &kp N7                &kp N8                 &kp N9     &kp N0          &kp BSLH
-&kp TAB         &kp Q      &kp P   &kp U          &kp Y             &kp SEMICOLON                                                                                                   &kp K   &kp F                 &kp L                  &kp R      &kp B           &kp FSLH
-&kp ESC         &kp A      &kp O   &kp E          &kp I             &kp G                                                                                                           &kp D   &kp H                 &kp T                  &kp N      &kp S           &sym_td
-&kp GRAVE       &kp X      &kp J   &kp COMMA      &kp EQUAL         &kp SQT        &kp LSHFT             &kp LCTRL  &sym_td       &kp LGUI  &kp RCTRL         &kp RSHFT             &kp C   &kp M                 &kp W                  &kp V      &kp PERIOD      &kp PG_UP
-&magic MAGIC 0  &kp SLASH  &kp Z   &less_lnch LAUNCHER LESS_THAN &kp GREATER_THAN               &bspc_sft LSHFT BSPC  &nav_td    &kp ESCAPE    &kp TAB   &ent_nav NAV RET  &spc_sft RSHFT SPACE          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACKET
+&kp F1          &kp F2                      &kp F3               &kp F4                    &kp F5                                                                                                                                    &kp F6                &kp F7                 &kp F8     &kp F9          &magic 2 0
+&to 5           &kp N1                      &kp N2               &kp N3                    &kp N4               &kp N5                                                                                                          &kp N6                &kp N7                 &kp N8     &morph_9        &morph_0        &kp UNDERSCORE
+&kp QUESTION    &kp Q                       &kp P                &kp U                     &kp Y                &kp SEMI                                                                                                        &kp K                 &kp F                  &kp L      &kp R           &kp B           &kp FSLH
+&kp ESCAPE      &hrm_left_pinky LGUI A      &hrm_left_ring 10 O  &hrm_left_middle LSHFT E  &hrm_left_index 8 I  &kp G                                                                                                           &kp D                 &hrm_right_index 8 H   &hrm_right_middle RIGHT_SHIFT T  &hrm_right_ring 9 N      &hrm_right_pinky RGUI S     &sym_td
+&td_backup_sym  &hrm_left_pinky_bottom 7 X  &kp J                &kp COMMA                 &kp EQUAL            &kp SINGLE_QUOTE  &kp LSHFT             &kp LCTRL  &sym_td       &kp LGUI  &kp RCTRL         &kp RSHFT             &kp C                 &kp M                  &kp W      &kp V           &hrm_right_pinky_bottom 10 DOT  &kp PG_UP
+&td_cursor      &kp LG(Z)                   &kp Z                &lt_launcher 7 LG(C)      &kp LG(V)                              &smart_bspc           &kp ESCAPE &kp TAB       &kp TAB   &lt_nav_enter 4 ENTER &sp_shift RSHFT P &kp ESCAPE            &kp QUESTION           &kp MINUS  &to 10          &rcurly_sq
             >;
         };
 
