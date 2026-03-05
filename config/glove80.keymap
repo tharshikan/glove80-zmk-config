@@ -15,13 +15,13 @@
 // layers
 
 #define DEFAULT 0
-#define LOWER 1
-#define MAGIC 2
-#define FACTORY_TEST 3
-#define SYMBOL 4
-#define NAV 5
-#define LAUNCHER 6
-#define SYM_BACKUP 7
+#define SYM_BACKUP 1
+#define LOWER 2
+#define MAGIC 3
+#define FACTORY_TEST 4
+#define SYMBOL 5
+#define NAV 6
+#define LAUNCHER 7
 #define CURSOR 8
 #define NAV_OPT 9
 #define NUM 10
@@ -509,6 +509,18 @@
             >;
         };
 
+        sym_backup_layer {
+            display-name = "Backup Sym";
+            bindings = <
+&trans          &trans                 &trans            &trans         &trans                                                                                                                                                                         &trans      &trans        &trans         &trans           &trans
+&kp EQUAL       &kp EXCLAMATION        &kp AT_SIGN       &kp HASH       &kp DOLLAR         &kp PERCENT                                                                                                                                         &mo 3                  &kp CARET  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB         &kp RIGHT_PARENTHESIS  &kp RBRC          &kp MINUS      &kp RIGHT_BRACKET  &kp RIGHT_BRACKET                                                                                                                                   &none                  &kp AT     &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp ESC         &kp LEFT_PARENTHESIS   &kp LBRC          &kp UNDER      &kp LEFT_BRACKET   &kp PIPE                                                                                                                                            &none                  &kp HASH   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
+&td_backup_sym  &kp LEFT_BRACKET       &kp GREATER_THAN  &kp LESS_THAN  &kp PLUS           &kp GRAVE          &none        &kp LCTRL  &kp LALT     &kp LGUI   &kp RCTRL  &none                                                                &kp COLON  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 2           &trans                 &trans            &trans         &trans                                &smart_bspc  &kp HOME   &kp PG_UP    &kp DEL    &kp END    &trans                                                                &sp_shift RSHFT KP_N0             &trans      &trans        &trans         &trans           &mo 2
+            >;
+        };
+
         lower_layer {
             display-name = "Lower";
             bindings = <
@@ -578,18 +590,6 @@
 &trans  &kp LG(LA(LC(LS(A))))  &kp LG(LA(LC(LS(O))))  &kp LC(LEFT)  &kp LC(RIGHT)          &kp LG(LA(LC(LS(G))))                                                                                                                                        &trans          &kp LG(LA(LC(LS(D))))  &kp LG(LA(LC(LS(H))))  &kp LG(LA(LC(LS(T))))  &kp LG(LA(LC(LS(N))))  &kp LG(LA(LC(LS(S))))  &trans
 &trans  &kp LG(LS(Q))          &kp LG(LA(LC(LS(J))))  &trans        &trans                 &trans                 &trans  &trans  &trans      &trans  &trans  &trans                                                                                &kp LG(NUMBER_0)       &kp LG(MINUS)          &kp LG(PLUS)           &kp RG(KP_PLUS)        &kp PERIOD             &trans
 &trans  &trans                 &trans                 &trans        &trans                                        &trans  &trans  &trans      &trans  &trans  &trans                                                                                                    &kp LG(SPACE)          &trans                 &trans                 &trans                 &trans
-            >;
-        };
-
-        sym_backup_layer {
-            display-name = "Backup Sym";
-            bindings = <
-&trans          &trans                 &trans            &trans         &trans                                                                                                                                                                         &trans      &trans        &trans         &trans           &trans
-&kp EQUAL       &kp EXCLAMATION        &kp AT_SIGN       &kp HASH       &kp DOLLAR         &kp PERCENT                                                                                                                                         &mo 3                  &kp CARET  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB         &kp RIGHT_PARENTHESIS  &kp RBRC          &kp MINUS      &kp RIGHT_BRACKET  &kp RIGHT_BRACKET                                                                                                                                   &none                  &kp AT     &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC         &kp LEFT_PARENTHESIS   &kp LBRC          &kp UNDER      &kp LEFT_BRACKET   &kp PIPE                                                                                                                                            &none                  &kp HASH   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
-&td_backup_sym  &kp LEFT_BRACKET       &kp GREATER_THAN  &kp LESS_THAN  &kp PLUS           &kp GRAVE          &none        &kp LCTRL  &kp LALT     &kp LGUI   &kp RCTRL  &none                                                                &kp COLON  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2           &trans                 &trans            &trans         &trans                                &smart_bspc  &kp HOME   &kp PG_UP    &kp DEL    &kp END    &trans                                                                &sp_shift RSHFT KP_N0             &trans      &trans        &trans         &trans           &mo 2
             >;
         };
 
