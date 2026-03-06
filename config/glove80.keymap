@@ -21,16 +21,16 @@
 #define SYM_BACKUP 1
 #define LOWER 2
 #define MAGIC 3
-#define FACTORY_TEST 4
-#define SYMBOL 5
-#define NAV 6
+#define NAV 4
+#define CURSOR 5
+#define NAV_OPT 6
 #define LAUNCHER 7
-#define CURSOR 8
-#define NAV_OPT 9
-#define NUM 10
-#define TEXT_NAVIGATION 11
-#define VISUAL_NAVIGATION 12
-#define NAV_LEFT_SINGLE_HAND 13
+#define SYMBOL 8
+#define NUM 9
+#define TEXT_NAVIGATION 10
+#define VISUAL_NAVIGATION 11
+#define NAV_LEFT_SINGLE_HAND 12
+#define FACTORY_TEST 13
 
 #define KEYS_L 0 1 2 3 4 5 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 55 56 57
 #define KEYS_R 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79
@@ -593,30 +593,6 @@
             >;
         };
 
-        factory_test_layer {
-            display-name = "Factory";
-            bindings = <
-&kp N0  &kp N6  &kp N2  &kp N8  &kp N4                                                                    &kp N4  &kp N8  &kp N2  &kp N6  &kp N0
-&kp N1  &kp N7  &kp N3  &kp N9  &kp N5  &kp N0                                                    &kp N0  &kp N5  &kp N9  &kp N3  &kp N7  &kp N1
-&kp N2  &kp N8  &kp N4  &kp N0  &kp N6  &kp N1                                                    &kp N1  &kp N6  &kp N0  &kp N4  &kp N8  &kp N2
-&kp N3  &kp N9  &kp N5  &kp N1  &kp N7  &kp N2                                                    &kp N2  &kp N7  &kp N1  &kp N5  &kp N9  &kp N3
-&kp N4  &kp N0  &kp N6  &kp N2  &kp N8  &kp N3  &kp N4  &kp N5  &kp N6    &kp N6  &kp N5  &kp N4  &kp N3  &kp N8  &kp N2  &kp N6  &kp N0  &kp N4
-&kp N5  &kp N1  &kp N7  &kp N3  &kp N9          &kp N7  &kp N8  &kp N9    &kp N9  &kp N8  &kp N7          &kp N9  &kp N3  &kp N7  &kp N1  &kp N5
-            >;
-        };
-
-        symbol_layer {
-            display-name = "Symbols";
-            bindings = <
-&trans           &trans           &trans         &trans            &trans                                                                                                                                              &trans        &trans                &trans                 &trans             &trans
-&kp EQUAL        &kp N1           &kp NUMBER_0   &kp NUMBER_1      &kp N4             &kp N5                                                                                                                 &kp STAR      &kp EXCLAMATION       &kp PLUS               &kp RIGHT_BRACKET  &kp N0             &kp MINUS
-&kp GRAVE        &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                                                                                                               &kp CARET     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp PIPE           &macro_thin_arrow
-&kp EXCLAMATION  &kp EXCLAMATION  &kp ASTERISK   &kp UNDERSCORE    &kp EQUAL          &kp AMPERSAND                                                                                                          &kp HASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp DOUBLE_QUOTES  &kp DOUBLE_QUOTES
-&kp LS(GRAVE)    &kp SLASH        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans     &trans                                                &trans       &trans    &trans  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp SQT            &kp DOT            &kp SINGLE_QUOTE
-&mo 2            &trans           &trans         &trans            &trans                            &trans  &kp HOME   &kp PG_UP                                             &kp END    &trans      &trans                &trans                &trans                 &trans             &trans             &mo 2
-            >;
-        };
-
         nav_layer {
             display-name = "Nav";
             bindings = <
@@ -626,18 +602,6 @@
 &kp LG(ESC)    &kp LG(A)   &kp LG(O)      &kp LG(K)     &kp LG(I)      &kp LG(DOT)                                                               &kp LG(D)       &kp LEFT       &kp DOWN    &kp UP          &kp RIGHT      &trans
 &kp LG(LSHFT)  &kp LG(Z)   &kp LG(COMMA)  &kp LG(C)     &kp LG(V)      &kp LG(LA(I))  &trans  &trans  &trans            &trans  &trans  &trans   &kp LG(N)       &kp LG(M)      &kp LG(W)   &kp LG(LS(N))   &kp LG(F)      &kp LG(RSHFT)
 &trans         &kp LG(X)   &kp LG(Z)      &kp LG(LEFT)  &kp LG(RIGHT)                 &kp LG(BSPC)  &trans  &kp LG(END)      &kp LG(PG_DN)  &kp LG(ENTER)  &kp LG(SPACE)                   &kp LG(UP)     &kp LG(DOWN)   &kp LG(LS(G))   &kp LG(G)   &trans
-            >;
-        };
-
-        launcher_layer {
-            display-name = "Launcher";
-            bindings = <
-&trans  &trans                 &trans                 &trans        &trans                                                                                                              &trans                 &trans                 &trans                 &trans                 &trans
-&trans  &trans                 &trans                 &trans        &trans                 &trans                                                       &trans          &trans                 &trans                 &trans                 &trans                 &trans
-&trans  &trans                 &kp LG(LA(ESC))        &kp LG(LA(LC(LS(P))))  &kp LC(UP)     &kp LG(LA(LC(LS(Y))))                                                       &trans          &trans                 &kp LS(LA(LC(LG(K))))  &kp LC(LEFT)           &kp LC(UP)             &kp LC(RIGHT)          &kp LG(LA(LC(LS(B))))
-&trans  &trans                 &kp LG(LA(LC(LS(A))))  &kp LG(LA(LC(LS(O))))  &kp LC(LEFT)   &kp LC(RIGHT)          &kp LG(LA(LC(LS(G))))                                &trans          &trans                 &kp LG(LA(LC(LS(D))))  &kp LG(LA(LC(LS(H))))  &kp LG(LA(LC(LS(T))))  &kp LG(LA(LC(LS(N))))  &kp LG(LA(LC(LS(S))))
-&trans  &trans                 &kp LG(LS(Q))          &kp LG(LA(LC(LS(J))))  &trans         &trans                 &trans                 &trans  &trans  &trans  &trans  &trans          &trans                 &trans                 &kp LG(NUMBER_0)       &kp LG(MINUS)          &kp LG(PLUS)           &kp RG(KP_PLUS)        &kp PERIOD
-&trans  &trans                 &trans                 &trans                 &trans        &trans                                        &trans  &trans  &trans   &trans  &trans  &trans  &kp LG(SPACE)                       &trans                 &trans                 &trans                 &trans
             >;
         };
 
@@ -662,6 +626,30 @@
 &kp LA(ESC)    &kp LA(A)   &kp LA(O)   &kp LA(E)     &kp LA(I)      &kp LA(G)                                                                     &kp LG(NUMBER_0)  &kp LA(LEFT)      &kp LA(DOWN)  &kp LA(UP)    &kp LA(RIGHT)     &trans
 &kp LA(LSHFT)  &kp LA(Z)   &kp LA(X)   &kp LA(C)     &kp LA(V)      &kp LA(SQT)    &trans        &trans  &trans           &trans  &trans        &trans            &kp LA(C)         &kp LA(M)     &kp LA(W)     &kp LA(V)     &kp LA(DOT)       &kp LA(RSHFT)
 &trans         &kp LA(X)   &kp LA(Z)   &kp LA(LEFT)  &kp LA(RIGHT)                 &kp LA(BSPC)  &trans  &kp LA(END)      &kp LA(PG_DN)  &kp LA(ENTER)  &kp LA(SPACE)                              &kp LA(UP)    &kp LA(DOWN)  &kp LA(RBKT)  &kp LA(BSLH)      &trans
+            >;
+        };
+
+        launcher_layer {
+            display-name = "Launcher";
+            bindings = <
+&trans  &trans                 &trans                 &trans        &trans                                                                                                              &trans                 &trans                 &trans                 &trans                 &trans
+&trans  &trans                 &trans                 &trans        &trans                 &trans                                                       &trans          &trans                 &trans                 &trans                 &trans                 &trans
+&trans  &trans                 &kp LG(LA(ESC))        &kp LG(LA(LC(LS(P))))  &kp LC(UP)     &kp LG(LA(LC(LS(Y))))                                                       &trans          &trans                 &kp LS(LA(LC(LG(K))))  &kp LC(LEFT)           &kp LC(UP)             &kp LC(RIGHT)          &kp LG(LA(LC(LS(B))))
+&trans  &trans                 &kp LG(LA(LC(LS(A))))  &kp LG(LA(LC(LS(O))))  &kp LC(LEFT)   &kp LC(RIGHT)          &kp LG(LA(LC(LS(G))))                                &trans          &trans                 &kp LG(LA(LC(LS(D))))  &kp LG(LA(LC(LS(H))))  &kp LG(LA(LC(LS(T))))  &kp LG(LA(LC(LS(N))))  &kp LG(LA(LC(LS(S))))
+&trans  &trans                 &kp LG(LS(Q))          &kp LG(LA(LC(LS(J))))  &trans         &trans                 &trans                 &trans  &trans  &trans  &trans  &trans          &trans                 &trans                 &kp LG(NUMBER_0)       &kp LG(MINUS)          &kp LG(PLUS)           &kp RG(KP_PLUS)        &kp PERIOD
+&trans  &trans                 &trans                 &trans                 &trans        &trans                                        &trans  &trans  &trans   &trans  &trans  &trans  &kp LG(SPACE)                       &trans                 &trans                 &trans                 &trans
+            >;
+        };
+
+        symbol_layer {
+            display-name = "Symbols";
+            bindings = <
+&trans           &trans           &trans         &trans            &trans                                                                                                                                              &trans        &trans                &trans                 &trans             &trans
+&kp EQUAL        &kp N1           &kp NUMBER_0   &kp NUMBER_1      &kp N4             &kp N5                                                                                                                 &kp STAR      &kp EXCLAMATION       &kp PLUS               &kp RIGHT_BRACKET  &kp N0             &kp MINUS
+&kp GRAVE        &kp GRAVE        &kp LESS_THAN  &kp GREATER_THAN  &kp MINUS          &kp PIPE                                                                                                               &kp CARET     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR         &kp PIPE           &macro_thin_arrow
+&kp EXCLAMATION  &kp EXCLAMATION  &kp ASTERISK   &kp UNDERSCORE    &kp EQUAL          &kp AMPERSAND                                                                                                          &kp HASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp DOUBLE_QUOTES  &kp DOUBLE_QUOTES
+&kp LS(GRAVE)    &kp SLASH        &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT    &trans  &trans     &trans                                                &trans       &trans    &trans  &kp AT_SIGN  &kp COLON             &kp COMMA              &kp SQT            &kp DOT            &kp SINGLE_QUOTE
+&mo 2            &trans           &trans         &trans            &trans                            &trans  &kp HOME   &kp PG_UP                                             &kp END    &trans      &trans                &trans                &trans                 &trans             &trans             &mo 2
             >;
         };
 
@@ -710,6 +698,18 @@
 &kp LG(ESC)    &kp LG(A)   &kp LG(Z)      &kp LG(C)     &kp LG(V)      &kp LG(DOT)                                                               &kp LG(D)       &kp LEFT       &kp DOWN_ARROW &kp UP_ARROW   &kp RIGHT      &trans
 &kp LG(LSHFT)  &kp LG(Z)   &kp LG(COMMA)  &kp LG(C)     &kp LG(V)      &kp LG(LA(I))    &trans  &trans  &trans           &trans  &trans  &trans  &kp LG(N)       &kp LG(M)      &kp LG(W)     &kp LG(LS(N))   &kp LG(F)      &kp LG(RSHFT)
 &trans         &kp LG(X)   &kp LG(Z)      &kp LG(LEFT)  &kp LG(RIGHT)                   &trans  &trans  &kp LG(BSPC)     &trans  &trans  &trans                  &kp LG(UP)     &kp LG(DOWN)  &kp LG(LS(G))   &kp LG(G)      &trans
+            >;
+        };
+
+        factory_test_layer {
+            display-name = "Factory";
+            bindings = <
+&kp N0  &kp N6  &kp N2  &kp N8  &kp N4                                                                    &kp N4  &kp N8  &kp N2  &kp N6  &kp N0
+&kp N1  &kp N7  &kp N3  &kp N9  &kp N5  &kp N0                                                    &kp N0  &kp N5  &kp N9  &kp N3  &kp N7  &kp N1
+&kp N2  &kp N8  &kp N4  &kp N0  &kp N6  &kp N1                                                    &kp N1  &kp N6  &kp N0  &kp N4  &kp N8  &kp N2
+&kp N3  &kp N9  &kp N5  &kp N1  &kp N7  &kp N2                                                    &kp N2  &kp N7  &kp N1  &kp N5  &kp N9  &kp N3
+&kp N4  &kp N0  &kp N6  &kp N2  &kp N8  &kp N3  &kp N4  &kp N5  &kp N6    &kp N6  &kp N5  &kp N4  &kp N3  &kp N8  &kp N2  &kp N6  &kp N0  &kp N4
+&kp N5  &kp N1  &kp N7  &kp N3  &kp N9          &kp N7  &kp N8  &kp N9    &kp N9  &kp N8  &kp N7          &kp N9  &kp N3  &kp N7  &kp N1  &kp N5
             >;
         };
 
