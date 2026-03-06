@@ -553,7 +553,7 @@
 &kp QUESTION    &kp Q                       &kp P                &kp U                     &kp Y                &kp SEMI                                                                                                        &kp K                 &kp F                  &kp L      &kp R           &kp B           &kp FSLH
 &kp ESCAPE      &hrm_left_pinky LGUI A      &hrm_left_ring VISUAL_NAVIGATION O  &hrm_left_middle LSHFT E  &hrm_left_index SYMBOL I  &kp G                                                                                                           &kp D                 &hrm_right_index SYMBOL H   &hrm_right_middle RIGHT_SHIFT T  &hrm_right_ring TEXT_NAVIGATION N      &hrm_right_pinky RGUI S     &sym_td
 &td_backup_sym  &hrm_left_pinky_bottom LAUNCHER X  &kp J                &kp COMMA                 &kp EQUAL            &kp SINGLE_QUOTE  &kp LSHFT             &kp LCTRL  &sym_td       &kp LGUI  &kp RCTRL         &kp RSHFT             &kp C                 &kp M                  &kp W      &kp V           &hrm_right_pinky_bottom VISUAL_NAVIGATION DOT  &kp PG_UP
-&magic MAGIC 0  &kp LG(Z)                   &kp Z                &lt_launcher 7 LG(C)      &kp LG(V)                              &smart_bspc           &kp ESCAPE &kp TAB       &kp TAB   &lt_nav_enter NAV ENTER &sp_shift RSHFT P &kp ESCAPE            &kp QUESTION           &kp MINUS  &to 10          &rcurly_sq
+&magic MAGIC 0  &kp LG(Z)                   &kp Z                &lt_launcher 7 LG(C)      &kp LG(V)                              &smart_bspc           &kp ESCAPE &kp TAB       &kp TAB   &lt_nav_enter NAV ENTER &sp_shift RSHFT SPACE &kp ESCAPE            &kp QUESTION           &kp MINUS  &to 10          &rcurly_sq
             >;
         };
 
@@ -565,7 +565,7 @@
 &kp TAB         &kp RIGHT_PARENTHESIS  &kp RBRC          &kp MINUS      &kp RIGHT_BRACKET  &kp RIGHT_BRACKET                                                     &kp AT         &kp KP_N7     &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
 &kp ESC         &kp LEFT_PARENTHESIS   &kp LBRC          &kp UNDER      &kp LEFT_BRACKET   &kp PIPE                                                              &kp HASH       &kp KP_N4     &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &trans
 &td_backup_sym  &kp LEFT_BRACKET       &kp GREATER_THAN  &kp LESS_THAN  &kp PLUS           &kp GRAVE          &kp LCTRL     &kp LALT     &kp HOME   &kp PG_UP    &kp RCTRL      &kp LGUI      &kp COLON      &kp KP_N1     &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2           &trans                 &trans            &trans         &trans                                &smart_bspc2  &kp DEL      &kp END    &trans       &kp ENTER      &sp_nav NAV KP_N0             &trans        &trans         &trans           &trans           &mo 2
+&mo 2           &trans                 &trans            &trans         &trans                                &smart_bspc2  &kp DEL      &kp END    &trans       &kp ENTER      &sp_nav NAV SPACE             &trans        &trans         &trans           &trans           &mo 2
             >;
         };
 
