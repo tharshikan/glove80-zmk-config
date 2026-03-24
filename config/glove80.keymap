@@ -68,45 +68,11 @@
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
 
-        // Custom Backspace/Shift behavior
 
-        bspc_sft: backspace_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BACKSPACE_SHIFT";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
-            retro-tap;
-            bindings = <&kp>, <&kp>;
-        };
 
-        // Custom Space/Shift behavior
 
-        spc_sft: space_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_SHIFT";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <225>;
-            quick-tap-ms = <0>;
-            retro-tap;
-            bindings = <&kp>, <&kp>;
-        };
 
-        // Custom Enter/Command behavior
 
-        ent_cmd: enter_command {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ENTER_COMMAND";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <0>;
-            retro-tap;
-            bindings = <&kp>, <&kp>;
-        };
 
         // Custom Enter/Nav Layer behavior
 
