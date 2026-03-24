@@ -21,6 +21,7 @@
 #define LAUNCHER 6
 #define CMD_NUM_LAY_2 7
 #define TEXT_NAV 8
+#define VISUAL_NAV 9
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 69 70 71
 #define KEYS_R 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 55 56 57 58 59 60 61 62 63 72 73 74
 
@@ -657,6 +658,18 @@
 &kp LS(LA(UP))     &kp LS(LA(LEFT))  &kp LS(UP)       &kp LS(DOWN)  &kp LS(LA(RIGHT))  &kp LS(LA(DOWN))                                                    &macro_cut_line  &macro_cut_word  &macro_insert_line_below  &macro_insert_line_above  &kp LG(LS(Z))  &macro_cut_line_end
 &trans             &trans            &trans           &trans        &trans             &trans            &trans  &trans  &trans    &trans  &trans  &trans  &trans           &trans           &trans                    &trans                    &trans         &trans
 &trans             &trans            &trans           &trans        &trans                               &trans  &trans  &trans    &trans  &trans  &trans                   &trans           &trans                    &trans                    &trans         &trans
+            >;
+        };
+
+        visual_navigation {
+            display-name = "Visual Nav";
+            bindings = <
+&trans             &trans            &trans           &trans           &trans                                                                                                                                           &trans                    &trans                   &trans          &trans           &trans
+&kp LS(LG(RIGHT))  &kp LG(SPACE)     &kp LC(LS(TAB))  &kp LC(TAB)      &kp LG(W)          &kp LG(LS(T))                                                                                           &kp LG(LS(LEFT))      &kp LA(LS(LEFT))          &tog 4                   &kp LG(Z)       &kp LS(RIGHT)    &kp LS(LG(RIGHT))
+&kp LG(LS(RIGHT))  &kp LG(Z)         &macro_vis_cut   &macro_vis_copy  &kp LG(LS(Z))      &kp LS(LA(DOWN))                                                                                        &kp LG(LS(LEFT))      &kp LS(LEFT)              &kp LS(DOWN)             &kp LS(UP)      &kp LA(LS(RIGHT))&kp LG(RIGHT)
+&kp LS(LA(UP))     &kp LS(LA(LEFT))  &kp LS(UP)       &kp LS(DOWN)     &kp LS(LA(RIGHT))  &kp LS(LA(DOWN))                                                                                        &macro_vis_wrap_parens&macro_vis_wrap_dquotes   &macro_vis_cut           &macro_vis_copy &macro_vis_wrap_brackets  &macro_vis_wrap_braces
+&trans             &trans            &trans           &trans           &trans             &trans            &trans  &trans  &trans                         &trans  &trans  &trans                 &trans                &trans                    &trans                   &trans          &trans           &trans
+&trans             &trans            &trans           &trans           &trans                               &trans  &trans  &tog 4                         &trans  &trans  &trans                                       &trans                    &trans                   &trans          &trans           &trans
             >;
         };
     };
