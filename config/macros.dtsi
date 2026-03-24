@@ -219,7 +219,7 @@
   Double_Click: Double_Click {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    bindings = <&mkp MB1 &mkp MB1>;
+    bindings = <&mkp MB1>, <&mkp MB1>;
     display-name = "Double Click";
   };
 
