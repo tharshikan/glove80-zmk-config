@@ -253,6 +253,53 @@
             bindings = <&mo>, <&kp>;
         };
 
+        mt_ctrl_enter: mod_tap_ctrl_enter {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_CTRL_ENTER";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_ctrl_esc: mod_tap_ctrl_esc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_CTRL_ESC";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <140>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_opt_esc: mod_tap_opt_esc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_OPT_ESC";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <140>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_opt_tab: mod_tap_opt_tab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_OPT_TAB";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <140>;
+            flavor = "tap-preferred";
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+        };
+
         hrm_left_index: homerow_mod_left_sym {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MOD_LEFT_SYM";
